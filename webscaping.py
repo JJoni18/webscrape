@@ -8,3 +8,9 @@ my_url = 'https://www.newegg.com/p/pl?d=ddr3+server+RAM'
 uClient = uReq(my_url)
 page_html = uClient.read()
 uClient.close()
+
+#html parsing
+page_soup = BeautifulSoup(page_html, "html.parser")
+
+#grabs each product
+ page_soup.findAll("div",{"class":"item-container"})
