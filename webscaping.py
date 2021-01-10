@@ -13,4 +13,10 @@ uClient.close()
 page_soup = BeautifulSoup(page_html, "html.parser")
 
 #grabs each product
- page_soup.findAll("div",{"class":"item-container"})
+ containers = page_soup.findAll("div",{"class":"item-container"})
+
+for container in containers:
+    brand = container.div.div.a.img["title"]
+
+    title_container = container.findAll("a", {"class":"item-title"})
+    product_name = title_container[0].text
