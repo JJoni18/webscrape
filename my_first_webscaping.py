@@ -13,7 +13,7 @@ uClient.close()
 page_soup = BeautifulSoup(page_html, "html.parser")
 
 #grabs each product
- containers = page_soup.findAll("div",{"class":"item-container"})
+containers = page_soup.findAll("div",{"class":"item-container"})
 
 for container in containers:
     brand = container.div.div.a.img["title"]
