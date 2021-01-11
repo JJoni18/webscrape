@@ -12,4 +12,5 @@ getting the request module
 #
 #BeautifulSoup will parse the html text and urllib will grab the page.
 #
+#from bs4 import BeautifulSoup as soup
 #
